@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm install:*)",
+      "Bash(node --input-type=module -e ':*)",
+      "Bash(curl -x http://127.0.0.1:7897 http://httpbin.org/ip -m 10)",
+      "Bash(curl -x http://127.0.0.1:7897 https://httpbin.org/ip -m 10 --insecure)"
+    ]
+  }
+}
