@@ -11,6 +11,7 @@
  *   limiter,    // 引向 RateLimiter
  * }
  */
+import { User } from '../entity/user.js'
 
 export function createContext(bot, msg, { queue, limiter } = {}) {
   return {
@@ -18,6 +19,9 @@ export function createContext(bot, msg, { queue, limiter } = {}) {
     msg,
     chatId: msg.chat?.id,
     text: msg.text ?? "",
+    user: new User(msg.from.id, msg.from.username, msg.from.first_name, 
+      msg.from.last_name, msg.from.language_code, msg.from.is_preminum
+    ),
     state: {}, // 中间件用这个传数据
     queue,
     limiter,
