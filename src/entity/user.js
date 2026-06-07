@@ -8,13 +8,12 @@ export class User {
         this.is_preminum = is_preminum;
     }
     toString() {
-        return `
-            ID: ${this.id}
-            Username: ${this.username ?? "N/A"}
-            First Name: ${this.first_name}
-            Last Name: ${this.last_name ?? "N/A"}
-            Language: ${this.language_code}
-            Premium: ${this.is_premium ? "Yes" : "No"}
-            `.trim();
+        return `ID: ${this.id}
+Username: ${this.username ?? "N/A"}
+First Name: ${this.first_name}
+Last Name: ${this.last_name ?? "N/A"}
+Language: ${this.language_code}
+Premium: ${this.is_premium ? "Yes" : "No"}
+        `.trim();
     }
 }
